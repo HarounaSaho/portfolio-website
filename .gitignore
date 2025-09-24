@@ -1,0 +1,28 @@
+# Large image files (over 1MB)
+images/innovation-workshop-cover.jpg
+images/innovation-workshop-1.jpg
+images/digital_art2.jpg
+images/traditional_painting2.jpg
+images/digital_art5.jpg
+images/digital_art4.jpg
+images/digital_art3.jpg
+images/traditional_painting4.jpg
+images/IMG_4648.JPG
+images/harouna-about.jpg
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+server.log
+
+# Temporary files
+*.tmp
+*.temp
