@@ -6,9 +6,20 @@
     <title>Harouna Saho - Designer & Artist</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Animated Background Layers -->
+    <div class="animated-bg"></div>
+    <div class="parallax-layer parallax-layer-1"></div>
+    <div class="parallax-layer parallax-layer-2"></div>
+    
+    <!-- Custom Interactive Cursor -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -34,11 +45,6 @@
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -55,7 +61,7 @@
         <div class="sketch-doodle sketch-doodle-3">🖌️</div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Harouna Saho</span></h1>
+                <h1 class="hero-title">Hi, I'm Harouna Saho</h1>
                 <p class="hero-subtitle">Designer & Artist</p>
                 <p class="hero-description">
                     I create innovative design experiences and express creativity through art. 
@@ -67,9 +73,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-palette"></i>
-                </div>
+                <img src="images/earth.gif" alt="Earth Animation" class="hero-gif">
             </div>
         </div>
     </section>
@@ -119,51 +123,57 @@
                 Innovative product experiences that combine functionality with beautiful design
             </p>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item yale-trivia-project">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
+                        <img src="images/bulldogtrivia-cover.png" alt="Yale Trivia App Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display: none;">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>Mobile App Design</h3>
-                        <p>User-centered mobile application with intuitive navigation and modern aesthetics</p>
+                        <h3>Yale Trivia App</h3>
+                        <p>Interactive trivia application for Yale community - Engaging educational platform</p>
                         <div class="portfolio-tags">
                             <span class="tag">Mobile</span>
-                            <span class="tag">UX/UI</span>
-                            <span class="tag">Prototyping</span>
+                            <span class="tag">Trivia</span>
+                            <span class="tag">Yale</span>
+                            <span class="tag">Community</span>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item jali-project">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
+                        <img src="images/jali-cover.png" alt="JALI Brand Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display: none;">
                             <i class="fas fa-laptop"></i>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>Web Platform Design</h3>
-                        <p>Responsive web platform focusing on accessibility and user engagement</p>
+                        <h3>JALI — Prototype Fashion Brand</h3>
+                        <p>African Heritage Meets Future Tech - A fusion of traditional patterns and futuristic design</p>
                         <div class="portfolio-tags">
                             <span class="tag">Web</span>
-                            <span class="tag">Responsive</span>
-                            <span class="tag">Accessibility</span>
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Afrofuturism</span>
+                            <span class="tag">E-commerce</span>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item art-lending-project">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-cube"></i>
+                        <img src="images/artlending-cover.png" alt="Art Lending Platform Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display: none;">
+                            <i class="fas fa-palette"></i>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>Product Prototyping</h3>
-                        <p>Physical product prototypes with focus on ergonomics and user experience</p>
+                        <h3>Art Lending Platform</h3>
+                        <p>Digital platform connecting art collectors with emerging artists through a curated lending system</p>
                         <div class="portfolio-tags">
-                            <span class="tag">Physical</span>
-                            <span class="tag">Prototyping</span>
-                            <span class="tag">Ergonomics</span>
+                            <span class="tag">Web Platform</span>
+                            <span class="tag">Art</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">UX/UI</span>
                         </div>
                     </div>
                 </div>
@@ -181,31 +191,21 @@
             <div class="art-gallery">
                 <div class="art-item">
                     <div class="art-image">
-                        <div class="art-placeholder">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                    </div>
-                    <div class="art-content">
-                        <h3>Abstract Expression</h3>
-                        <p>Vibrant abstract painting exploring color theory and emotional expression</p>
-                        <span class="art-medium">Acrylic on Canvas</span>
-                    </div>
-                </div>
-                <div class="art-item">
-                    <div class="art-image">
-                        <div class="art-placeholder">
+                        <img src="images/painting-cover-converted.jpg" alt="Traditional Painting" class="art-cover-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="art-placeholder" style="display: none;">
                             <i class="fas fa-palette"></i>
                         </div>
                     </div>
                     <div class="art-content">
-                        <h3>Urban Landscape</h3>
-                        <p>Contemporary cityscape capturing the energy and rhythm of urban life</p>
-                        <span class="art-medium">Oil on Canvas</span>
+                        <h3>Traditional Painting</h3>
+                        <p>Classical and contemporary traditional artwork showcasing traditional techniques</p>
+                        <span class="art-medium">Oil & Acrylic on Canvas</span>
                     </div>
                 </div>
                 <div class="art-item">
                     <div class="art-image">
-                        <div class="art-placeholder">
+                        <img src="images/digital_art_cover.jpg" alt="Digital Art" class="art-cover-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="art-placeholder" style="display: none;">
                             <i class="fas fa-brush"></i>
                         </div>
                     </div>
@@ -213,18 +213,6 @@
                         <h3>Digital Art</h3>
                         <p>Modern digital illustrations blending traditional techniques with technology</p>
                         <span class="art-medium">Digital Painting</span>
-                    </div>
-                </div>
-                <div class="art-item">
-                    <div class="art-image">
-                        <div class="art-placeholder">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="art-content">
-                        <h3>Mixed Media</h3>
-                        <p>Experimental pieces combining various materials and techniques</p>
-                        <span class="art-medium">Mixed Media</span>
                     </div>
                 </div>
             </div>
@@ -239,43 +227,43 @@
                 Creative endeavors and collaborative projects that showcase diverse skills
             </p>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card bsc-project">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
+                        <img src="images/innovation-workshop-cover.jpg" alt="BSC Shirt Design" class="project-cover-image">
                     </div>
                     <div class="project-content">
-                        <h3>Innovation Workshop</h3>
-                        <p>Led creative workshops teaching design thinking and innovation methodologies</p>
+                        <h3>BSC Shirt Design</h3>
+                        <p>Official T-shirts for Black Student Conference - Graphic design and branding</p>
                         <div class="project-links">
                             <a href="#" class="project-link">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card mural-project">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <img src="images/muralcover.jpg" alt="Community Mural Project Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
                             <i class="fas fa-users"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Community Art Project</h3>
-                        <p>Collaborative mural project bringing together local artists and community members</p>
+                        <h3>Community Mural Project</h3>
+                        <p>Collaborative mural with local sandwich shop - bringing together artists and community members</p>
                         <div class="project-links">
                             <a href="#" class="project-link">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card architecture-project">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-book"></i>
+                        <img src="images/architecture-cover.png" alt="Architecture Project Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <i class="fas fa-building"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Design Publication</h3>
-                        <p>Co-authored research paper on sustainable design practices in modern manufacturing</p>
+                        <h3>Architecture Project</h3>
+                        <p>Innovative architectural design and spatial planning using Rhino</p>
                         <div class="project-links">
                             <a href="#" class="project-link">View Details</a>
                         </div>
@@ -300,7 +288,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p>harouna.saho@example.com</p>
+                            <p>harouna.saho@yale.edu</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -309,7 +297,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+1 405-589-8811</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -318,7 +306,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Location</h3>
-                            <p>San Francisco, CA</p>
+                            <p>New Haven, CT</p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -329,7 +317,9 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/meorjbva" method="POST">
+                        <input type="hidden" name="_to" value="harounsa654@gmail.com">
+                        <input type="hidden" name="_subject" value="New message from portfolio website">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -353,8 +343,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Harouna Saho. All rights reserved.</p>
-                <p>Designed with passion for creativity and innovation</p>
+            <p>&copy; 2025 Harouna Saho. All rights reserved.</p>
             </div>
         </div>
     </footer>
