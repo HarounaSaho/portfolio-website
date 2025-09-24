@@ -931,6 +931,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-placeholder {
     width: 200px;
     height: 200px;
