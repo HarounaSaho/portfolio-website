@@ -836,11 +836,11 @@ const artProjects = {
             'Contemporary interpretation of traditional methods'
         ],
         images: [
-            'images/traditional_painting1.jpg',
-            'images/traditional_painting2.jpg',
-            'images/traditional_painting3.jpg',
-            'images/traditional_painting4.jpg',
-            'images/traditional_painting5.jpg'
+            'images/traditional_painting1-optimized.jpg',
+            'images/traditional_painting2-optimized.jpg',
+            'images/traditional_painting3-optimized.jpg',
+            'images/traditional_painting4-optimized.jpg',
+            'images/traditional_painting5-optimized.jpg'
         ]
     },
     'digital-art': {
@@ -857,11 +857,11 @@ const artProjects = {
             'High-resolution output'
         ],
         images: [
-            'images/digital_art1.jpg',
-            'images/digital_art2.jpg',
-            'images/digital_art3.jpg',
-            'images/digital_art4.jpg',
-            'images/digital_art5.jpg'
+            'images/digital_art1-optimized.jpg',
+            'images/digital_art2-optimized.jpg',
+            'images/digital_art3-optimized.jpg',
+            'images/digital_art4-optimized.jpg',
+            'images/digital_art5-optimized.jpg'
         ]
     }
 };
