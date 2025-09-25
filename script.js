@@ -836,11 +836,11 @@ const artProjects = {
             'Contemporary interpretation of traditional methods'
         ],
         images: [
-            'images/traditional_painting1-optimized.jpg',
-            'images/traditional_painting2-optimized.jpg',
-            'images/traditional_painting3-optimized.jpg',
-            'images/traditional_painting4-optimized.jpg',
-            'images/traditional_painting5-optimized.jpg'
+            'images/traditional_painting1-optimized.jpg?v=3',
+            'images/traditional_painting2-optimized.jpg?v=3',
+            'images/traditional_painting3-optimized.jpg?v=3',
+            'images/traditional_painting4-optimized.jpg?v=3',
+            'images/traditional_painting5-optimized.jpg?v=3'
         ]
     },
     'digital-art': {
@@ -857,11 +857,11 @@ const artProjects = {
             'High-resolution output'
         ],
         images: [
-            'images/digital_art1-optimized.jpg',
-            'images/digital_art2-optimized.jpg',
-            'images/digital_art3-optimized.jpg',
-            'images/digital_art4-optimized.jpg',
-            'images/digital_art5-optimized.jpg'
+            'images/digital_art1-optimized.jpg?v=3',
+            'images/digital_art2-optimized.jpg?v=3',
+            'images/digital_art3-optimized.jpg?v=3',
+            'images/digital_art4-optimized.jpg?v=3',
+            'images/digital_art5-optimized.jpg?v=3'
         ]
     }
 };
@@ -881,11 +881,11 @@ const additionalProjects = {
             'Community Impact: Created wearable pieces that served as keepsakes, promoting pride and connection beyond the event'
         ],
         images: [
-            'images/innovation-workshop-1-optimized.jpg',
-            'images/innovation-workshop-2-optimized.jpg',
-            'images/innovation-workshop-3-optimized.jpg',
-            'images/innovation-workshop-4-optimized.jpg',
-            'images/innovation-workshop-5-optimized.jpg'
+            'images/innovation-workshop-1-optimized.jpg?v=3',
+            'images/innovation-workshop-2-optimized.jpg?v=3',
+            'images/innovation-workshop-3-optimized.jpg?v=3',
+            'images/innovation-workshop-4-optimized.jpg?v=3',
+            'images/innovation-workshop-5-optimized.jpg?v=3'
         ]
     },
     'community-art-project': {
@@ -903,10 +903,10 @@ const additionalProjects = {
             'Supporting local business through artistic partnership'
         ],
         images: [
-            'images/muralcoverfirst-optimized.jpg',
-            'images/muralsecond-optimized.jpg',
-            'images/muralthird-optimized.jpg',
-            'images/murallast-optimized.jpg'
+            'images/muralcoverfirst-optimized.jpg?v=3',
+            'images/muralsecond-optimized.jpg?v=3',
+            'images/muralthird-optimized.jpg?v=3',
+            'images/murallast-optimized.jpg?v=3'
         ]
     },
     'architecture-project': {
