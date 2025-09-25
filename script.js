@@ -881,11 +881,11 @@ const additionalProjects = {
             'Community Impact: Created wearable pieces that served as keepsakes, promoting pride and connection beyond the event'
         ],
         images: [
-            'images/innovation-workshop-1.jpg',
-            'images/innovation-workshop-2.jpg',
-            'images/innovation-workshop-3.jpg',
-            'images/innovation-workshop-4.jpg',
-            'images/innovation-workshop-5.jpg'
+            'images/innovation-workshop-1-optimized.jpg',
+            'images/innovation-workshop-2-optimized.jpg',
+            'images/innovation-workshop-3-optimized.jpg',
+            'images/innovation-workshop-4-optimized.jpg',
+            'images/innovation-workshop-5-optimized.jpg'
         ]
     },
     'community-art-project': {
@@ -903,10 +903,10 @@ const additionalProjects = {
             'Supporting local business through artistic partnership'
         ],
         images: [
-            'images/muralcoverfirst.jpg',
-            'images/muralsecond.jpg',
-            'images/muralthird.JPG',
-            'images/murallast.jpg'
+            'images/muralcoverfirst-optimized.jpg',
+            'images/muralsecond-optimized.jpg',
+            'images/muralthird-optimized.jpg',
+            'images/murallast-optimized.jpg'
         ]
     },
     'architecture-project': {
