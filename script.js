@@ -419,11 +419,13 @@ const createProjectPage = (projectData) => {
                 <div class="project-page-image">
                     ${projectData.images ? `
                         <div class="project-image-gallery">
+                            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous image">‹</button>
                             ${projectData.images.map((image, index) => `
                                 <div class="project-image-item ${index === 0 ? 'active' : ''}">
                                     <img src="${image}" alt="${projectData.title} - Image ${index + 1}" class="project-gallery-image">
                                 </div>
                             `).join('')}
+                            <button class="gallery-arrow gallery-arrow-right" aria-label="Next image">›</button>
                         </div>
                         <div class="project-image-nav">
                             ${projectData.images.map((_, index) => `
@@ -439,7 +441,7 @@ const createProjectPage = (projectData) => {
                 <div class="project-page-details">
                     <h3 class="sketch-text">Project Overview</h3>
                     <p>${projectData.description}</p>
-                    <h3 class="sketch-text">Technologies Used</h3>
+                    <h3 class="sketch-text">Tools Used</h3>
                     <div class="project-tags">
                         ${projectData.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
@@ -545,6 +547,54 @@ const createProjectPage = (projectData) => {
             justify-content: center;
             background: var(--off-white);
             border: 2px solid var(--accent-yellow);
+        }
+        
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .gallery-arrow:hover {
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+        
+        .gallery-arrow-left {
+            left: 15px;
+        }
+        
+        .gallery-arrow-right {
+            right: 15px;
+        }
+        
+        .gallery-arrow:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: translateY(-50%) scale(0.9);
+        }
+        
+        .gallery-arrow:disabled:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-50%) scale(0.9);
         }
         
         .project-image-item {
@@ -715,6 +765,8 @@ const createProjectPage = (projectData) => {
     if (projectData.images && projectData.images.length > 1) {
         const imageItems = projectPage.querySelectorAll('.project-image-item');
         const navButtons = projectPage.querySelectorAll('.image-nav-btn');
+        const leftArrow = projectPage.querySelector('.gallery-arrow-left');
+        const rightArrow = projectPage.querySelector('.gallery-arrow-right');
         let currentIndex = 0;
         
         const showImage = (index) => {
@@ -726,7 +778,35 @@ const createProjectPage = (projectData) => {
             imageItems[index].classList.add('active');
             navButtons[index].classList.add('active');
             currentIndex = index;
+            
+            // Update arrow button states
+            if (leftArrow) {
+                leftArrow.disabled = currentIndex === 0;
+            }
+            if (rightArrow) {
+                rightArrow.disabled = currentIndex === projectData.images.length - 1;
+            }
         };
+        
+        // Initialize arrow states
+        showImage(0);
+        
+        // Arrow button event listeners
+        if (leftArrow) {
+            leftArrow.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    showImage(currentIndex - 1);
+                }
+            });
+        }
+        
+        if (rightArrow) {
+            rightArrow.addEventListener('click', () => {
+                if (currentIndex < projectData.images.length - 1) {
+                    showImage(currentIndex + 1);
+                }
+            });
+        }
         
         navButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => showImage(index));
