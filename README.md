@@ -79,7 +79,3 @@ portfolio-website/
 ## Contact
 
 For any questions or customization help, feel free to reach out!
-
----
-
-**Note**: This is a static website. The contact form currently shows a success message but doesn't actually send emails. To make it functional, you'll need to integrate with a backend service or email service like Formspree, Netlify Forms, or your own server.
